@@ -1,10 +1,10 @@
 const Chats = require("../models/chatSchema");
 
 module.exports = {
-  postchat: async (message, reciever, sender) => {
+  postchat: async (message, receiver, sender) => {
     const chat = new Chats({
-      chatdata: message,
-      reciever,
+      message,
+      receiver,
       sender,
     });
     await chat.save();

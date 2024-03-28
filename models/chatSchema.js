@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const chatSchema = new mongoose.Schema({
-  reciever: {
+  receiver: {
     type: mongoose.Types.ObjectId,
     required: true,
   },
@@ -8,11 +8,11 @@ const chatSchema = new mongoose.Schema({
     type: mongoose.Types.ObjectId,
     required: true,
   },
-  chatdata: {
+  message: {
     type: String,
     required: true,
   },
-  date: {
+  timeDisplay: {
     type: Date,
     default: Date.now,
     required: true,
